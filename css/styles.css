@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    padding: 20px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    border-bottom: 1px solid white;
+}
+
+.logo {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+.nav-links {
+    display: flex;
+    width: 500px; /**/
+    margin-left: 30px;
+    justify-content: space-around;
+    align-items: center;
+ }
+
+.nav-links li {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.nav-links li a {
+    display: block;
+    text-align: center;
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+}
+
+
+.onzeMissie {
+    display: flex;
+    justify-content: center;
+}
+
+.containerMissie {
+    width: 1024px;
+    height: 678px;
+    background-image: url("../images/theebags.jpeg");
+    background-size: cover;
+    background-position: center;
+/*    background-attachment: fixed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.missieTitle {
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 10px;
+    margin: 20px;
+}
+
+
+.theeVanDeMaand {
+    display: flex;
+    justify-content: center;
+}
+
+.containerThee {
+    width: 1024px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.theeTitle {
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 10px;
+    margin: 20px;
+}
+
+.theeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    text-align: center;
+}
+
+.theeCell {
+    width: 200px;
+    height: 150px;
+}
+.theeCell:hover {
+transform: scale(1.1);
+transition: 0.5s ease;
+}
+
+.photo {
+    width: 100%;
+}
+
+
+.locaties {
+    display: flex;
+    justify-content: center;
+}
+
+.containerLocaties {
+    width: 1024px;
+    min-height: 100vh; /*moet voor parallax. was: 512px;*/
+    background-image: url("../images/theepot.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /*paralax alleen bij meer dan 1024 breed*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.locatieTitle {
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 10px;
+    margin: 20px;
+}
+
+.locatieGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    text-align: center;
+    margin-bottom: 15px; /**/
+}
+
+.locatieCell {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 200px;
+    height: 200px;
+}
+
+.adres1 {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.adres2 {
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.adres3 {
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.adres4 {
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+@media only screen and (max-width:1024px) {
+    .containerMissie {
+        width: 768px;
+        height: 508px; /*1280x847*/
+        background-attachment: scroll;
+    }
+
+    .containerThee {
+        width: 768px
+    }
+
+    .containerLocaties {
+        width: 768px;
+        min-height: 384px; /*1280x640*/
+        background-attachment: scroll;
+   }
+
+   .theeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .locatieGrid {
+        grid-template-columns: repeat(3, 1fr);
+        /* blijft 3 omdat 2+1 niet mooi is */
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .containerMissie {
+        width: 360px;
+        height: 238px; /*1280x847*/
+    }
+
+    .containerThee {
+        width: 360px
+    }
+
+    .containerLocaties {
+        min-height: 180px; /*min-height groeit als locties er niet in passen*/ /*1280x640*/
+        width: 360px;
+    }
+
+    .theeGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .locatieGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .locatieCell {
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.1)
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
