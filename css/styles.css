@@ -48,22 +48,26 @@ header {
     text-decoration: none;
 }
 
+.sectionContainer {
 
-.onzeMissie {
     display: flex;
     justify-content: center;
 }
+/* .onzeMissie {
+    display: flex;
+    justify-content: center;
+} */
 
 .containerMissie {
-    width: 1024px;
-    height: 678px;
+    width: 1024px; /* plaatje is 1280x847 */
+    height: 678px; /* 847 * 1024/1280 */
     background-image: url("../images/theebags.jpeg");
     background-size: cover;
     background-position: center;
 /*    background-attachment: fixed; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* was niet nodig met 1 divje, heb ik gemmakt zo dat hij hetzelfde wordt als andere containers */
     align-items: center;
 }
 
@@ -78,10 +82,7 @@ header {
 }
 
 
-.theeVanDeMaand {
-    display: flex;
-    justify-content: center;
-}
+/* //////////////// */
 
 .containerThee {
     width: 1024px;
@@ -117,15 +118,15 @@ transform: scale(1.1);
 transition: 0.5s ease;
 }
 
-.photo {
+ .photo {
     width: 100%;
 }
 
-
+/*
 .locaties {
     display: flex;
     justify-content: center;
-}
+} */
 
 .containerLocaties {
     width: 1024px;
@@ -141,8 +142,8 @@ transition: 0.5s ease;
 }
 
 .locatieTitle {
-    text-align: center;
-    width: 100%;
+    text-align: center;46
+    width: 80%;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 10px;
@@ -154,7 +155,7 @@ transition: 0.5s ease;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
     text-align: center;
-    margin-bottom: 15px; /**/
+    margin-bottom: 15px;
 }
 
 .locatieCell {
@@ -202,7 +203,7 @@ transition: 0.5s ease;
     }
 
     .containerThee {
-        width: 768px
+        width: 768px;
     }
 
     .containerLocaties {
@@ -224,7 +225,7 @@ transition: 0.5s ease;
 @media only screen and (max-width:768px) {
     .containerMissie {
         width: 360px;
-        height: 238px; /*1280x847*/
+        height: 238px; /*1280x847*/ /*360/1280 * 847 = 238 */
     }
 
     .containerThee {
@@ -246,7 +247,7 @@ transition: 0.5s ease;
 
     .locatieCell {
         border-style: solid;
-        border-color: rgba(255, 255, 255, 0.1)
+        border-color: rgba(255, 255, 255, 0.1);
     }
 
     header {
@@ -261,3 +262,4 @@ transition: 0.5s ease;
     .footer {
         flex-direction: column;
     }
+}
